@@ -21,10 +21,11 @@ class GreetingShould {
         greetService = new GreetService();
     }
 
-    @Test
+    @ParameterizedTest
+    @ValueSource(strings = { "Bob", "Alice" })
     @DisplayName("return 'Hello, <name>' (requirement 1)")
-    void return_greeting_with_hello() {
-        final String greeting = greetService.greet("Bob");
-        assertThat(greeting).isEqualTo("Hello, Bob");
+    void return_greeting_with_hello(String name) {
+        final String greeting = greetService.greet(name);
+        assertThat(greeting).isEqualTo("Hello, " + name);
     }
 }

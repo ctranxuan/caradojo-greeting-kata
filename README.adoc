@@ -1,0 +1,4 @@
+= Greeting Kata
+
+This is an implementation of the Greeting Kata defined
+https://github.com/testdouble/contributing-tests/wiki/Greeting-Kata[here].

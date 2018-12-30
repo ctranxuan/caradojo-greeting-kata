@@ -40,4 +40,11 @@ class GreetingShould {
         final String greeting = greetingService.greet("JERRY");
         assertThat(greeting).isEqualTo("HELLO, JERRY!");
     }
+
+    @Test
+    @DisplayName("return 'Hello, <name1> and <name2>., when there are two names")
+    void return_greeting_with_2_name() {
+        final String greeting = greetingService.greet("Jill", "Jane");
+        assertThat(greeting).isEqualTo("Hello, Jill and Jane.");
+    }
 }

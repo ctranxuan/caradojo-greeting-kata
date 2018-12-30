@@ -34,4 +34,10 @@ class GreetingShould {
         assertThat(greeting).isEqualTo("Hello, my friend.");
     }
 
+    @Test
+    @DisplayName("return a shout 'HELLO, <name>' (requirement 3)")
+    void return_greeting_with_HELLO() {
+        final String greeting = greetingService.greet("JERRY");
+        assertThat(greeting).isEqualTo("HELLO, JERRY!");
+    }
 }
